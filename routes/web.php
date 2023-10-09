@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,20 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/articles/create', function () {
+    return view('articles/create');
+});
+
+Route::post('/articles', function (Request $request) {
+    // 空いておらず、文字列であり、255文字を超えてはならない。
+    $request->validate([
+        'body' => [
+            'required',
+            'string',
+            'max:255'
+        ],
+    ]);
+
+    return "hello";
+});

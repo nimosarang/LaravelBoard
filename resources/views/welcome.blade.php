@@ -32,7 +32,10 @@
             @endif
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                간단한 소셜 미디어 웹사이트
+                シンプルなソーシャルメディアウェブサイト
+                <div>
+                    <a href="/articles/create">Write</a>
+                </div>
             </div>
         </div>
     </body>
